@@ -6,11 +6,13 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<climits>
+
 struct node
 {
     int data;
     struct node *next;
 }*first=NULL,*second=NULL,*third=NULL;
+
 void create(int a[],int n)
 {
     struct node *last,*t;
@@ -27,7 +29,9 @@ void create(int a[],int n)
         last=t;
     }
 }
+
 void create1(int b[],int m)
+    
 {
     struct node *last,*t;
     second=(struct node *)malloc(sizeof(struct node));
@@ -43,7 +47,9 @@ void create1(int b[],int m)
         last=t;
     }
 }
+
 void display(struct node *p)
+    
 {
     while(p!=NULL)
     {
@@ -51,7 +57,9 @@ void display(struct node *p)
         p=p->next;
     }
 }
+
 void merge(struct node *p,struct node *q)
+    
 {
     struct node *last;
     if(p->data<q->data)
@@ -84,7 +92,9 @@ void merge(struct node *p,struct node *q)
     if(p)   last->next=q;
     if(q)   last->next=q;
 }
+
 int main()
+    
 {
     int a[]={1,3,5,7,9};
     int b[]={2,4,6,8,10};
